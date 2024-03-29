@@ -6,8 +6,8 @@ public class EnemySpawn : MonoBehaviour
 {
     public GameObject enemyPrefab;
     public Transform spawnPoint;
-    public int maxEnemies = 10;      // Maximum number of enemies to spawn
-    public int enemiesPerWave = 5;   // Number of enemies to spawn per wave
+    public int maxEnemies = 8;      // Maximum number of enemies to spawn
+    public int enemiesPerWave;   // Number of enemies to spawn per wave
     public float timeBetweenWaves = 5f;  // Time delay between waves
     public int totalWaves = 5;       // Total number of waves
 
@@ -17,6 +17,7 @@ public class EnemySpawn : MonoBehaviour
     void Start()
     {
         SpawnWave();
+        enemiesPerWave = 4;
     }
 
     void Update()
@@ -42,6 +43,7 @@ public class EnemySpawn : MonoBehaviour
             SpawnEnemy();
             enemiesSpawned++;
         }
+        enemiesPerWave++;
     }
 
     void SpawnEnemy()
