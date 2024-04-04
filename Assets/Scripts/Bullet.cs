@@ -12,10 +12,10 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        //if (collision.gameObject.name == "Enemy")
-        //{
+        if (collision.gameObject.name == "Enemy")
+        {
             Destroy(collision.gameObject);
             Destroy(gameObject);
-        //}
+        }
     }
 }
