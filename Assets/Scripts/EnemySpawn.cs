@@ -7,9 +7,9 @@ public class EnemySpawn : MonoBehaviour
     public GameObject enemyPrefab;
     public Transform spawnPoint;
     public int maxEnemies = 8;      // Maximum number of enemies to spawn
-    public int enemiesPerWave;   // Number of enemies to spawn per wave
+    public int enemiesPerWave = 4;   // Number of enemies to spawn per wave
     public float timeBetweenWaves = 5f;  // Time delay between waves
-    public int totalWaves = 5;       // Total number of waves
+    private int totalWaves = 5;       // Total number of waves
 
     private int enemiesSpawned = 0;
     private int currentWave = 0;
@@ -17,13 +17,13 @@ public class EnemySpawn : MonoBehaviour
     void Start()
     {
         SpawnWave();
-        enemiesPerWave = 4;
+        //enemiesPerWave = 4;
     }
 
     void Update()
     {
         // Check if all enemies in the current wave are killed
-        if (enemiesSpawned >= enemiesPerWave)
+        if (enemiesSpawned <= enemiesPerWave)
         {
             // Reset counter, start a new wave after a delay, and check for the end of the game
             currentWave++;

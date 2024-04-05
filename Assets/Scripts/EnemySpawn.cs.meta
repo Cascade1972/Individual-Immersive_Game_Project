@@ -3,7 +3,9 @@ guid: 775e5c32381c1b148803beff77b21a07
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - enemyPrefab: {fileID: 843040013720540285, guid: fb7d09ff256ac86418166d9b754c6955, type: 3}
+  - spawnPoint: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
