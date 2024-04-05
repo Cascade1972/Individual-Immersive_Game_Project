@@ -8,6 +8,7 @@ TagManager:
   - Anchor
   - Enemy
   - TeleportBack
+  - Wasp
   layers:
   - Default
   - TransparentFX

@@ -75,9 +75,10 @@ GameObject:
   - component: {fileID: 6033554758249971382}
   - component: {fileID: -8074544086575736512}
   - component: {fileID: 5731829909698543014}
+  - component: {fileID: 382035158870003981}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Enemy
+  m_TagString: Wasp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,10 +172,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.64639187
-  m_Height: 2.3175926
+  m_Radius: 0.8135352
+  m_Height: 2.5766296
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0.012404442}
+  m_Center: {x: 0.01996088, y: -0.047714233, z: 0.038046837}
 --- !u!114 &6033554758249971382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +313,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &382035158870003981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843040013720540285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7c0cabfcf599a542af51e300675dd97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4894645711881158388
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,15 +7,17 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 3f);
     }
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        //if (collision.gameObject.name == "Enemy")
-        //{
-            Destroy(collision.gameObject);
+        Debug.Log("Collision");
+        if (collision.gameObject.tag == "Wasp")
+        {
+            Debug.Log("Hit Enemy!!!");
+            collision.gameObject.GetComponent<EnemyHealth>().DamageTaken(1);
             Destroy(gameObject);
-        //}
+        }
     }
 }

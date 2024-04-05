@@ -5482,7 +5482,7 @@ GameObject:
   - component: {fileID: 990995941}
   - component: {fileID: 990995945}
   m_Layer: 0
-  m_Name: Wall 1
+  m_Name: Wall Boundry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
