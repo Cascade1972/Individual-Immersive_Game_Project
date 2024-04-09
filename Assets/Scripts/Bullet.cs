@@ -10,13 +10,13 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject, 3f);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
         Debug.Log("Collision");
-        if (collision.gameObject.tag == "Wasp")
+        if (collider.gameObject.tag == "Wasp")
         {
-            Debug.Log("Hit Enemy!!!");
-            collision.gameObject.GetComponent<EnemyHealth>().DamageTaken(1);
+            //Debug.Log("Hit Enemy!!!");
+            collider.gameObject.GetComponent<EnemyHealth>().DamageTaken(1);
             Destroy(gameObject);
         }
     }
