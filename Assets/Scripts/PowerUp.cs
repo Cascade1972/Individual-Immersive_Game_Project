@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private int baseDamage = 2; // Initial damage value
+    public int damageMultiplier = 1; // Default multiplier
+
+    public void ApplyDamageMultiplier(int multiplier)
     {
-        
+        damageMultiplier = multiplier;
+        Debug.Log("Damage multiplier applied: " + damageMultiplier);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DealDamage(GameObject target)
     {
-        
+        int totalDamage = baseDamage * damageMultiplier;
+        Debug.Log("Dealing " + totalDamage + " damage to " + target.name);
+        EnemyHealth enemyHealth = target.GetComponent<EnemyHealth>();
+        if (enemyHealth != null)
+        {
+            enemyHealth.DamageTaken(totalDamage);
+        }
+        else
+        {
+            Debug.LogWarning("EnemyHealth script not found on the target!");
+        }
     }
 }

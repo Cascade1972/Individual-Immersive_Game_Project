@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - TeleportBack
   - Wasp
+  - PowerUp
   layers:
   - Default
   - TransparentFX
