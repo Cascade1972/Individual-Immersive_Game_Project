@@ -78,7 +78,7 @@ public class EnemySpawn : MonoBehaviour
     void Update()
     {
         // Check if all enemies in the current wave are killed
-        if (currentWave >= totalWaves && enemiesSpawned >= maxEnemies)
+        if (currentWave <= totalWaves && enemiesSpawned <= maxEnemies)
         {
             CancelInvoke("SpawnWave");
         }
