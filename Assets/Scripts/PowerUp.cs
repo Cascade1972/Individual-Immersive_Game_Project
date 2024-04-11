@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    private int baseDamage = 2; // Initial damage value
-    public int damageMultiplier = 1; // Default multiplier
+    private int baseDamage = 1; // Initial damage value
+    public int damageMultiplier = 2; // Default multiplier
 
     public void ApplyDamageMultiplier(int multiplier)
     {
