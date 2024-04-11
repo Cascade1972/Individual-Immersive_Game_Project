@@ -1,4 +1,5 @@
-/*using System.Collections;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("Collision");
+        //Debug.Log("Collision");
         if (collider.gameObject.tag == "Wasp")
         {
             //Debug.Log("Hit Enemy!!!");
@@ -20,10 +21,10 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
-}*/
+}
 
 
-using UnityEngine;
+/*using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
@@ -63,6 +64,6 @@ public class Bullet : MonoBehaviour
             }
         }
     }
-}
+}*/
 
 

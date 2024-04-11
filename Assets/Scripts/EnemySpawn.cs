@@ -64,7 +64,7 @@ public class EnemySpawn : MonoBehaviour
     public int maxEnemies = 4;      // Maximum number of enemies to spawn
     public int enemiesPerWave = 4;   // Number of enemies to spawn per wave
     public float timeBetweenWaves = 5f;  // Time delay between waves
-    private int totalWaves = 5;       // Total number of waves
+    private int totalWaves = 6;       // Total number of waves
 
     private int enemiesSpawned = 0;
     private int currentWave = 0;
@@ -99,7 +99,7 @@ public class EnemySpawn : MonoBehaviour
         {
             SpawnEnemy();
             enemiesSpawned++;
-            yield return new WaitForSeconds(10f); // Delay between each enemy spawn
+            yield return new WaitForSeconds(30f); // Delay between each enemy spawn
         }
         currentWave++;
         spawning = false;
@@ -110,5 +110,14 @@ public class EnemySpawn : MonoBehaviour
         // Instantiate the enemy at the specified spawn point
         Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
     }
+
+    public void EnemyDefeated()
+    {
+        enemiesSpawned--;
+    }
+
 }
+
+
+
 
