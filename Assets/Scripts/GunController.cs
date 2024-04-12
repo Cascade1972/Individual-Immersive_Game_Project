@@ -37,6 +37,7 @@ public class GunController : MonoBehaviour
     private void Fire()
     {
         GameObject bullet = Instantiate(_bulletPrefab) as GameObject;
+        bullet.GetComponent<Bullet>().SetPowerUp(GetComponent<PowerUp>());
         bullet.SetActive(true);
         bullet.transform.position = _launch.transform.position;
         bullet.transform.rotation = _launch.transform.rotation;

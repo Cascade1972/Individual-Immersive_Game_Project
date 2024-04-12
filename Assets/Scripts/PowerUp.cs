@@ -4,27 +4,42 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    private int baseDamage = 1; // Initial damage value
-    public int damageMultiplier = 2; // Default multiplier
+    public int baseDamage = 1; // Initial damage value
+    public bool powerUpActive = false;
 
-    public void ApplyDamageMultiplier(int multiplier)
+    void Update()
     {
-        damageMultiplier = multiplier;
-        Debug.Log("Damage multiplier applied: " + damageMultiplier);
-    }
-
-    public void DealDamage(GameObject target)
-    {
-        int totalDamage = baseDamage * damageMultiplier;
-        Debug.Log("Dealing " + totalDamage + " damage to " + target.name);
-        EnemyHealth enemyHealth = target.GetComponent<EnemyHealth>();
-        if (enemyHealth != null)
+        if (powerUpActive)
         {
-            enemyHealth.DamageTaken(totalDamage);
+            baseDamage = 2;
         }
         else
         {
-            Debug.LogWarning("EnemyHealth script not found on the target!");
+            baseDamage = 1;
         }
+
+    }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        Debug.Log("Triggered");
+        if (collider.gameObject.CompareTag("PowerUp"))
+        {
+            Debug.Log("Destroyed");
+            Destroy(collider.gameObject);
+            StartCoroutine(PowerUpTimer());
+        }
+    }
+
+    public IEnumerator PowerUpTimer()
+    {
+        // Set powerUpActive to true
+        powerUpActive = true;
+
+        // Wait for 5 seconds
+        yield return new WaitForSeconds(5);
+
+        // Set powerUpActive back to false
+        powerUpActive = false;
     }
 }

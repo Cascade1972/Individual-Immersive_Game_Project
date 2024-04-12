@@ -1,4 +1,4 @@
-using System;
+/*using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,14 +21,17 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
-}
+}*/
 
 
-/*using UnityEngine;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public int bulletDamage = 1;
+    private PowerUp powerUp;
 
     // Start is called before the first frame update
     void Start()
@@ -40,30 +43,19 @@ public class Bullet : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Wasp"))
         {
-            // Check if the player has a PowerUp script
-            PowerUp powerUp = GetComponent<PowerUp>();
-            if (powerUp != null)
-            {
-                // Apply the damage multiplier from the player's power-up
-                bulletDamage *= powerUp.damageMultiplier;
-            }
-
+            Debug.Log(collider.gameObject.GetComponent<EnemyHealth>());
+            
             // Deal damage to the enemy
-            collider.gameObject.GetComponent<EnemyHealth>().DamageTaken(bulletDamage);
+            collider.gameObject.GetComponent<EnemyHealth>().DamageTaken(powerUp.baseDamage);
             Destroy(gameObject);
         }
-        else if (collider.gameObject.CompareTag("PowerUp"))
-        {
-            // Check if the player has a PowerUp script
-            PowerUp powerUp = GetComponent<PowerUp>();
-            if (powerUp != null)
-            {
-                // Apply damage multiplier from the power-up
-                powerUp.ApplyDamageMultiplier(2); // 2 times damage multiplier
-                Destroy(collider.gameObject);
-            }
-        }
     }
-}*/
+
+    public void SetPowerUp(PowerUp power)
+    {
+        powerUp = power;
+    }
+
+}
 
 
