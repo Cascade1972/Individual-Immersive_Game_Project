@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class TeleportTrigger : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class TeleportTrigger : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Teleport"))
         {
             audio.Play();
         }

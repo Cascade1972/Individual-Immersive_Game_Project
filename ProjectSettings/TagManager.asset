@@ -10,6 +10,7 @@ TagManager:
   - TeleportBack
   - Wasp
   - PowerUp
+  - Teleport
   layers:
   - Default
   - TransparentFX
