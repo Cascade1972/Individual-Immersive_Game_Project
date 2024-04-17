@@ -32,7 +32,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private PowerUp powerUp;
-
+    
     // Start is called before the first frame update
     void Start()
     {

@@ -9,7 +9,6 @@ public class TeleportationPad : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Touching");
         if (other.CompareTag("Teleport"))
         {
             Debug.Log("Teleporting");

@@ -42,11 +42,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7684259e64446ea4b9f444c70a882ac2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9601938
+      value: -0.9601938
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7684259e64446ea4b9f444c70a882ac2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.27933463
+      value: 0.27933463
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7684259e64446ea4b9f444c70a882ac2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7684259e64446ea4b9f444c70a882ac2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: -180
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7684259e64446ea4b9f444c70a882ac2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -152,7 +152,7 @@ AudioSource:
   m_GameObject: {fileID: 481059340715150246}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2630244005376383835, guid: fdff075d6dfeb25479baba031c17f6c0, type: 2}
   m_audioClip: {fileID: 8300000, guid: 224eaddb954f2224dbdf44c0323ec190, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.25

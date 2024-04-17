@@ -9,6 +9,8 @@ public class GunController : MonoBehaviour
     private bool _okayToShoot = false;
     private bool _shootingPaused = false;
     private ControllerInput _inputData;
+    [SerializeField]
+    private AudioSource audio;
 
     void Start()
     {
@@ -28,6 +30,7 @@ public class GunController : MonoBehaviour
                         _shootingPaused = true;
                         Fire();
                         StartCoroutine(Pause());
+                        audio.Play();
                     }
                 }
             }

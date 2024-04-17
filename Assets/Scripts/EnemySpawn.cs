@@ -99,7 +99,7 @@ public class EnemySpawn : MonoBehaviour
         {
             SpawnEnemy();
             enemiesSpawned++;
-            yield return new WaitForSeconds(30f); // Delay between each enemy spawn
+            yield return new WaitForSeconds(20f); // Delay between each enemy spawn
         }
         currentWave++;
         spawning = false;

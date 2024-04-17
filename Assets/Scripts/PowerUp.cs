@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    public int baseDamage = 1; // Initial damage value
+    public int baseDamage = 2; // Initial damage value
     public bool powerUpActive = false;
 
     void Update()
     {
         if (powerUpActive)
         {
-            baseDamage = 2;
+            baseDamage = 4;
         }
         else
         {
-            baseDamage = 1;
+            baseDamage = 2;
         }
 
     }
